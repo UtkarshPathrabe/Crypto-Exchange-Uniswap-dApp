@@ -5,10 +5,22 @@ import { ERC20, useContractFunction, useEthers, useTokenAllowance, useTokenBalan
 import { ethers } from 'ethers';
 import { parseUnits } from 'ethers/lib/utils';
 
-const Exchange = () => {
-  return (
-    <div>Exchange</div>
-  )
-}
+import { ROUTER_ADDRESS } from '../config';
+import { AmountIn, AmountOut, Balance } from '.';
+import styles from '../styles';
+import { getAvailableTokens, getCounterpartTokens, findPoolByTokens, isOperationPending, getFailureMessage, getSuccessMessage } from '../utils';
 
-export default Exchange
+const Exchange = ({ pools }) => {
+  return (<div className='flex flex-col w-full items-center'>
+    <div className='mb-8'>
+        <AmountIn />
+        <Balance />
+    </div>
+    <div className='mb-8 w-[100%]'>
+        <AmountOut />
+        <Balance />
+    </div>
+  </div>);
+};
+
+export default Exchange;
