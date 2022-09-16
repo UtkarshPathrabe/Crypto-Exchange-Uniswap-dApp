@@ -29,6 +29,6 @@ const WalletButton = () => {
   }} className={styles.walletButton}>
     {(accountAddress) ? accountAddress : 'Connect Wallet'}
   </button>);
-}
+};
 
-export default WalletButton
+export default WalletButton;
