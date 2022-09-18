@@ -1,10 +1,10 @@
 import { Goerli } from "@usedapp/core";
 
-export const ROUTER_ADDRESS = "0xca549DE48107D9C3b75A718c5d91189dc9b43cB4"; 
+export const ROUTER_ADDRESS = process.env.REACT_APP_ROUTER_ADDRESS; 
 
 export const DAPP_CONFIG = {
   readOnlyChainId: Goerli.chainId,
   readOnlyUrls: {
-    [Goerli.chainId]: "https://eth-goerli.g.alchemy.com/v2/GlIoggxj8Ub50WBscDlsJPoOa1ddN-tx",
+    [Goerli.chainId]: process.env.REACT_APP_GOERLI_CHAIN_ID,
   },
 };
