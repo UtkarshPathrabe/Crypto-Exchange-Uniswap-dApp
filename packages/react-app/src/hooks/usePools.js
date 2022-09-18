@@ -11,14 +11,13 @@ export const loadPools = async (providerUrl) => {
 
   const routerInfo = await getRouterInfo(ROUTER_ADDRESS, web3);
   const factoryInfo = await getFactoryInfo(routerInfo.factory, web3);
-  console.log(factoryInfo);
   return factoryInfo.pairsInfo;
 };
 
 export const usePools = () => {
   const { readOnlyChainId, readOnlyUrls } = useConfig();
   const [loading, setLoading] = useState(true);
-  const [pools, setPools] = useState({});
+  const [pools, setPools] = useState([]);
 
   useEffect(() => {
     loadPools(readOnlyUrls[readOnlyChainId])
