@@ -8,7 +8,7 @@ const styles = {
     "flex-1 flex justify-start items-center flex-col w-full mt-10",
   headTitle: "text-white font-poppins font-black text-5xl tracking-wide",
   subTitle: "text-dim-white font-poppins font-medium mt-3 text-base",
-  exchangeBoxWrapper: "mt-10 w-full flex justify-center",
+  exchangeBoxWrapper: "mt-10 w-full flex justify-center mb-20",
   exchangeBox:
     "relative md:max-w-[700px] md:min-w-[500px] min-w-full max-w-full gradient-border p-[2px] rounded-3xl",
   exchange:
