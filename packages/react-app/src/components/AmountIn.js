@@ -26,7 +26,7 @@ const AmountIn = ({ value, onChange, currencyValue, onSelect, currencies, isSwap
       type='number'
       value={value}
       disabled={isSwapping}
-      onChange={(e) => (typeof onChange === "function") ? onChange(e.target.valueAsNumber) : null }
+      onChange={(e) => (typeof onChange === "function") && onChange(e.target.value) }
       className={styles.amountInput}
     />
     <div className='relative' onClick={() => setShowList((prevState) => !prevState)}>
