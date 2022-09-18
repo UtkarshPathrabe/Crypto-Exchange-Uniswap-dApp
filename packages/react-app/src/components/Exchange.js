@@ -58,7 +58,6 @@ const Exchange = ({ pools }) => {
     const trimmedValue = value.trim();
     try {
       if (trimmedValue) {
-        console.log("onFromValueChange", value, trimmedValue);
         parseUnits(value);
         setFromValue(value);
       }
